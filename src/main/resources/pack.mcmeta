@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "description": "Charmony Echolocation resources",
+    "pack_format": ${pack_version}
+  }
+}
