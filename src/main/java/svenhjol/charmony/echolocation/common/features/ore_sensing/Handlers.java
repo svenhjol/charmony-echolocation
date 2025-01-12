@@ -6,8 +6,6 @@ import svenhjol.charmony.core.base.Setup;
 
 public final class Handlers extends Setup<OreSensing> {
     public static final int CHECK_TICKS = 20;
-    public static final int BLOCK_HORIZONTAL_GLOW_RANGE = 16;
-    public static final int BLOCK_VERTICAL_GLOW_RANGE = 32;
 
     public Handlers(OreSensing feature) {
         super(feature);
@@ -19,7 +17,9 @@ public final class Handlers extends Setup<OreSensing> {
             && level.getGameTime() % CHECK_TICKS == 0
             && player.hasEffect(feature().registers.oreSensingEffect.get())
         ) {
-            var positions = BlockPos.withinManhattan(player.blockPosition(), BLOCK_HORIZONTAL_GLOW_RANGE, BLOCK_VERTICAL_GLOW_RANGE, BLOCK_HORIZONTAL_GLOW_RANGE);
+            var h = feature().horizontalDistance();
+            var v = feature().verticalDistance();
+            var positions = BlockPos.withinManhattan(player.blockPosition(), h, v, h);
             for (var pos : positions) {
                 if (level.getBlockState(pos).is(Tags.SENSED_ORES)) {
                     var entity = new GlowingBlockEntity(level, pos, CHECK_TICKS);

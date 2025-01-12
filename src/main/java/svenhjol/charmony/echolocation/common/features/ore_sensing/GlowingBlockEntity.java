@@ -31,6 +31,10 @@ public class GlowingBlockEntity extends Entity {
 
     @Override
     public int getTeamColor() {
+        if (!OreSensing.feature().coloredOutlines()) {
+            return super.getTeamColor();
+        }
+
         var state = level().getBlockState(blockPosition().above());
 
         if (state.is(Tags.BLACK_GLOWING_ORES)) {
@@ -90,6 +94,13 @@ public class GlowingBlockEntity extends Entity {
         super.tick();
 
         var level = level();
+
+        // Expires the overlay render when the block has been removed.
+        if (level.getBlockState(blockPosition().above()).isAir()) {
+            remove(RemovalReason.DISCARDED);
+        }
+
+        // Expires the overlay render after a specified time.
         if (!level.isClientSide() && ticks >= maxTicks) {
             remove(RemovalReason.DISCARDED);
         }

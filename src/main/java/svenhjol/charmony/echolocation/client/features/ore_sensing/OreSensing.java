@@ -7,7 +7,7 @@ import svenhjol.charmony.core.enums.Side;
 
 import java.util.function.Supplier;
 
-@FeatureDefinition(side = Side.Client)
+@FeatureDefinition(side = Side.Client, showInConfig = false)
 public final class OreSensing extends SidedFeature {
     public final Supplier<Common> common;
     public final Registers registers;

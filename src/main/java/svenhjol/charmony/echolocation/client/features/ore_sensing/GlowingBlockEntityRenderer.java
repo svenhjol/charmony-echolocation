@@ -9,7 +9,7 @@ import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import svenhjol.charmony.echolocation.common.features.ore_sensing.GlowingBlockEntity;
 
 class GlowingBlockEntityRenderer extends EntityRenderer<GlowingBlockEntity, ItemEntityRenderState> {
@@ -28,7 +28,7 @@ class GlowingBlockEntityRenderer extends EntityRenderer<GlowingBlockEntity, Item
     @Override
     public void extractRenderState(GlowingBlockEntity entity, ItemEntityRenderState renderState, float f) {
         super.extractRenderState(entity, renderState, f);
-        var itemEntity = new ItemEntity(entity.level(), entity.getX(), entity.getY(), entity.getZ(), new ItemStack(Items.BLACK_CONCRETE));
+        var itemEntity = new ItemEntity(entity.level(), entity.getX(), entity.getY(), entity.getZ(), new ItemStack(Blocks.BLACK_CONCRETE));
         renderState.extractItemGroupRenderState(itemEntity, itemEntity.getItem(), itemModelResolver);
     }
 
@@ -47,6 +47,6 @@ class GlowingBlockEntityRenderer extends EntityRenderer<GlowingBlockEntity, Item
 
     @Override
     protected boolean affectedByCulling(GlowingBlockEntity entity) {
-        return false;
+        return true;
     }
 }
