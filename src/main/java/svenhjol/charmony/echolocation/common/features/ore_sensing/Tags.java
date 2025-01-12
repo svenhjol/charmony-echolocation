@@ -6,8 +6,8 @@ import net.minecraft.world.level.block.Block;
 import svenhjol.charmony.echolocation.EcholocationMod;
 
 public final class Tags {
-    public static final TagKey<Block> GLOWING_ORES = TagKey.create(Registries.BLOCK,
-        EcholocationMod.id("glowing_ores"));
+    public static final TagKey<Block> SENSED_ORES = TagKey.create(Registries.BLOCK,
+        EcholocationMod.id("sensed_ores"));
 
     public static final TagKey<Block> BLACK_GLOWING_ORES = TagKey.create(Registries.BLOCK,
         EcholocationMod.id("black_glowing_ores"));

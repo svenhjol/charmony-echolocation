@@ -21,7 +21,7 @@ public final class Handlers extends Setup<OreSensing> {
         ) {
             var positions = BlockPos.withinManhattan(player.blockPosition(), BLOCK_HORIZONTAL_GLOW_RANGE, BLOCK_VERTICAL_GLOW_RANGE, BLOCK_HORIZONTAL_GLOW_RANGE);
             for (var pos : positions) {
-                if (level.getBlockState(pos).is(Tags.GLOWING_ORES)) {
+                if (level.getBlockState(pos).is(Tags.SENSED_ORES)) {
                     var entity = new GlowingBlockEntity(level, pos, CHECK_TICKS);
                     level.addFreshEntity(entity);
                 }
