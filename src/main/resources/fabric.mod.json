@@ -19,6 +19,9 @@
     ],
     "client": [
         "svenhjol.charmony.echolocation.client.ClientInitializer"
+    ],
+    "modmenu": [
+        "svenhjol.charmony.echolocation.integration.ModMenuPlugin"
     ]
   },
 
