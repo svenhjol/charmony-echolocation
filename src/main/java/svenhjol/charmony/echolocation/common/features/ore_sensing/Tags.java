@@ -1,4 +1,4 @@
-package svenhjol.charmony.echolocation.common.features.echolocation;
+package svenhjol.charmony.echolocation.common.features.ore_sensing;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;

@@ -1,4 +1,4 @@
-package svenhjol.charmony.echolocation.common.features.echolocation;
+package svenhjol.charmony.echolocation.common.features.ore_sensing;
 
 import svenhjol.charmony.core.annotations.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
@@ -7,17 +7,17 @@ import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.echolocation.EcholocationMod;
 
 @FeatureDefinition(side = Side.Common)
-public final class Echolocation extends SidedFeature {
+public final class OreSensing extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
 
-    public Echolocation(Mod mod) {
+    public OreSensing(Mod mod) {
         super(mod);
         registers = new Registers(this);
         handlers = new Handlers(this);
     }
 
-    public static Echolocation feature() {
-        return EcholocationMod.instance().sidedFeature(Echolocation.class);
+    public static OreSensing feature() {
+        return EcholocationMod.instance().sidedFeature(OreSensing.class);
     }
 }

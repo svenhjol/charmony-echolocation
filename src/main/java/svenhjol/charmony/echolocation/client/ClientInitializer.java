@@ -3,7 +3,7 @@ package svenhjol.charmony.echolocation.client;
 import net.fabricmc.api.ClientModInitializer;
 import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.echolocation.EcholocationMod;
-import svenhjol.charmony.echolocation.client.features.echolocation.Echolocation;
+import svenhjol.charmony.echolocation.client.features.ore_sensing.OreSensing;
 
 public final class ClientInitializer implements ClientModInitializer {
     @Override
@@ -13,7 +13,7 @@ public final class ClientInitializer implements ClientModInitializer {
 
         // Prepare and run the mod.
         var mod = EcholocationMod.instance();
-        mod.addSidedFeature(Echolocation.class);
+        mod.addSidedFeature(OreSensing.class);
         mod.run(Side.Client);
     }
 }

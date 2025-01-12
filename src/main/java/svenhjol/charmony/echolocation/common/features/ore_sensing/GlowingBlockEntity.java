@@ -1,4 +1,4 @@
-package svenhjol.charmony.echolocation.common.features.echolocation;
+package svenhjol.charmony.echolocation.common.features.ore_sensing;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -21,7 +21,7 @@ public class GlowingBlockEntity extends Entity {
     }
 
     public GlowingBlockEntity(Level level, BlockPos pos, int maxTicks) {
-        super(Echolocation.feature().registers.glowingBlockEntity.get(), level);
+        super(OreSensing.feature().registers.glowingBlockEntity.get(), level);
 
         this.maxTicks = maxTicks;
         this.setGlowingTag(true);

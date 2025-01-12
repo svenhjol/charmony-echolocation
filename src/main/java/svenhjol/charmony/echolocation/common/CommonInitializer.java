@@ -3,7 +3,8 @@ package svenhjol.charmony.echolocation.common;
 import net.fabricmc.api.ModInitializer;
 import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.echolocation.EcholocationMod;
-import svenhjol.charmony.echolocation.common.features.echolocation.Echolocation;
+import svenhjol.charmony.echolocation.common.features.mob_sensing.MobSensing;
+import svenhjol.charmony.echolocation.common.features.ore_sensing.OreSensing;
 
 public final class CommonInitializer implements ModInitializer {
     @Override
@@ -13,7 +14,8 @@ public final class CommonInitializer implements ModInitializer {
 
         // Prepare and run the mod.
         var mod = EcholocationMod.instance();
-        mod.addSidedFeature(Echolocation.class);
+        mod.addSidedFeature(MobSensing.class);
+        mod.addSidedFeature(OreSensing.class);
         mod.run(Side.Common);
     }
 }

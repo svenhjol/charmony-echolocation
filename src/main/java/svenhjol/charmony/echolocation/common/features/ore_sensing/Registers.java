@@ -1,4 +1,4 @@
-package svenhjol.charmony.echolocation.common.features.echolocation;
+package svenhjol.charmony.echolocation.common.features.ore_sensing;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -13,11 +13,11 @@ import svenhjol.charmony.core.events.PlayerTickCallback;
 
 import java.util.function.Supplier;
 
-public final class Registers extends Setup<Echolocation> {
-    public final Supplier<Holder<MobEffect>> echolocationEffect;
+public final class Registers extends Setup<OreSensing> {
+    public final Supplier<Holder<MobEffect>> oreSensingEffect;
     public final Supplier<EntityType<GlowingBlockEntity>> glowingBlockEntity;
 
-    public Registers(Echolocation feature) {
+    public Registers(OreSensing feature) {
         super(feature);
         var registry = CommonRegistry.forFeature(feature);
 
@@ -27,9 +27,9 @@ public final class Registers extends Setup<Echolocation> {
             .clientTrackingRange(GlowingBlockEntity.TRACKING_RANGE)
             .updateInterval(1));
 
-        echolocationEffect = new Registerable<>(feature,
+        oreSensingEffect = new Registerable<>(feature,
             () -> Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT,
-                feature.id("echolocation"), new EcholocationEffect()));
+                feature.id("ore_sensing"), new OreSensingEffect()));
     }
 
     @Override

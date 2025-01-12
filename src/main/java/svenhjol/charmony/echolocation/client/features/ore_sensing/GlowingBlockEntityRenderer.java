@@ -1,4 +1,4 @@
-package svenhjol.charmony.echolocation.client.features.echolocation;
+package svenhjol.charmony.echolocation.client.features.ore_sensing;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -10,7 +10,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import svenhjol.charmony.echolocation.common.features.echolocation.GlowingBlockEntity;
+import svenhjol.charmony.echolocation.common.features.ore_sensing.GlowingBlockEntity;
 
 class GlowingBlockEntityRenderer extends EntityRenderer<GlowingBlockEntity, ItemEntityRenderState> {
     private final ItemModelResolver itemModelResolver;
