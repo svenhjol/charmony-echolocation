@@ -9,10 +9,19 @@ import svenhjol.charmony.core.enums.Side;
 import svenhjol.charmony.echolocation.EcholocationMod;
 
 @FeatureDefinition(side = Side.Common, description = """
-    Allows the player to see the outline of ores in the world when the Ore Sensing mob effect is applied.""")
+    Allows the player to see the outline of ores in the world when the Ore Sensing effect is applied.""")
 public final class OreSensing extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
+
+    @Configurable(
+        name = "Register potion",
+        description = """
+            If true, potion recipes will be added for ore sensing.
+            This should be added if you intend the use this as a standalone feature.
+            Brew an ore sensing potion using an echo shard with an awkward potion base."""
+    )
+    private static boolean registerPotion = false;
 
     @Configurable(
         name = "Colored outlines",
@@ -43,6 +52,10 @@ public final class OreSensing extends SidedFeature {
 
     public static OreSensing feature() {
         return EcholocationMod.instance().sidedFeature(OreSensing.class);
+    }
+
+    public boolean registerPotion() {
+        return registerPotion;
     }
 
     public boolean coloredOutlines() {

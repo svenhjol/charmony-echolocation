@@ -6,6 +6,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import svenhjol.charmony.core.base.Registerable;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.common.CommonRegistry;
@@ -36,6 +38,30 @@ public final class Registers extends Setup<OreSensing> {
     public Runnable boot() {
         return () -> {
             PlayerTickCallback.EVENT.register(feature().handlers::playerTick);
+
+            if (feature().registerPotion()) {
+                registerPotion();
+            }
         };
+    }
+
+    private void registerPotion() {
+        var registry = CommonRegistry.forFeature(feature());
+
+        var potionId = "ore_sensing";
+        var longPotionId = "long_ore_sensing";
+
+        var potion = registry.potion(potionId, () -> new OreSensingPotion(potionId));
+        var longPotion = registry.potion(longPotionId, () -> new LongOreSensingPotion(longPotionId));
+
+        registry.potionRecipe(
+            Potions.AWKWARD,
+            () -> Items.ECHO_SHARD,
+            potion.get());
+
+        registry.potionRecipe(
+            potion.get(),
+            () -> Items.REDSTONE,
+            longPotion.get());
     }
 }

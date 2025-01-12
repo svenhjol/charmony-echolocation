@@ -2,5 +2,21 @@
   "effect.charmony-echolocation.mob_sensing": "Mob Sensing",
   "effect.charmony-echolocation.mob_sensing.desc": "View the outline of mobs through the map.",
   "effect.charmony-echolocation.ore_sensing": "Ore Sensing",
-  "effect.charmony-echolocation.ore_sensing.desc": "View the outline of ores through the map."
+  "effect.charmony-echolocation.ore_sensing.desc": "View the outline of ores through the map.",
+  "item.minecraft.potion.effect.mob_sensing": "Potion of Mob Sensing",
+  "item.minecraft.potion.effect.long_mob_sensing": "Potion of Mob Sensing",
+  "item.minecraft.splash_potion.effect.mob_sensing": "Splash Potion of Mob Sensing",
+  "item.minecraft.splash_potion.effect.long_mob_sensing": "Splash Potion of Mob Sensing",
+  "item.minecraft.lingering_potion.effect.mob_sensing": "Lingering Potion of Mob Sensing",
+  "item.minecraft.lingering_potion.effect.long_mob_sensing": "Lingering Potion of Mob Sensing",
+  "item.minecraft.tipped_arrow.effect.mob_sensing": "Potion of Mob Sensing",
+  "item.minecraft.tipped_arrow.effect.long_mob_sensing": "Arrow of Mob Sensing",
+  "item.minecraft.potion.effect.ore_sensing": "Potion of Ore Sensing",
+  "item.minecraft.potion.effect.long_ore_sensing": "Potion of Ore Sensing",
+  "item.minecraft.splash_potion.effect.ore_sensing": "Splash Potion of Ore Sensing",
+  "item.minecraft.splash_potion.effect.long_ore_sensing": "Splash Potion of Ore Sensing",
+  "item.minecraft.lingering_potion.effect.ore_sensing": "Lingering Potion of Ore Sensing",
+  "item.minecraft.lingering_potion.effect.long_ore_sensing": "Lingering Potion of Ore Sensing",
+  "item.minecraft.tipped_arrow.effect.ore_sensing": "Potion of Ore Sensing",
+  "item.minecraft.tipped_arrow.effect.long_ore_sensing": "Arrow of Ore Sensing"
 }
