@@ -19,21 +19,21 @@ public final class OreSensing extends SidedFeature {
         description = "If true, the outline of the ore corresponds to the ore type.",
         requireRestart = false
     )
-    private static final boolean coloredOutlines = true;
+    private static boolean coloredOutlines = true;
 
     @Configurable(
         name = "Horizontal sensing distance",
         description = "Distance in blocks horizontally around the player in which ores will be highlighted.",
         requireRestart = false
     )
-    private static final int horizontalDistance = 16;
+    private static int horizontalDistance = 16;
 
     @Configurable(
         name = "Vertical sensing distance",
         description = "Distance in blocks vertically around the player in which ores will be highlighted.",
         requireRestart = false
     )
-    private static final int verticalDistance = 32;
+    private static int verticalDistance = 32;
 
     public OreSensing(Mod mod) {
         super(mod);
