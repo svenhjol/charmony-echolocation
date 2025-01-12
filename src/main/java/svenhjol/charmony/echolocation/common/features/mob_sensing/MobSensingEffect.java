@@ -5,6 +5,6 @@ import net.minecraft.world.effect.MobEffectCategory;
 
 public class MobSensingEffect extends MobEffect {
     protected MobSensingEffect() {
-        super(MobEffectCategory.BENEFICIAL, 0x556655);
+        super(MobEffectCategory.BENEFICIAL, 0x99aa99);
     }
 }
