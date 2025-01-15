@@ -8,7 +8,7 @@ import svenhjol.charmony.core.enums.Side;
 @ModDefinition(
     id = EcholocationMod.ID,
     sides = {Side.Client, Side.Common},
-    name = "Charmony Echolocation",
+    name = "Echolocation",
     description = "Library mod to show nearby entities and blocks.")
 public final class EcholocationMod extends Mod {
     public static final String ID = "charmony-echolocation";
