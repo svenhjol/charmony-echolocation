@@ -11,7 +11,7 @@ import net.minecraft.world.item.alchemy.Potions;
 import svenhjol.charmony.core.base.Registerable;
 import svenhjol.charmony.core.base.Setup;
 import svenhjol.charmony.core.common.CommonRegistry;
-import svenhjol.charmony.core.events.PlayerTickCallback;
+import svenhjol.charmony.api.events.PlayerTickCallback;
 
 import java.util.function.Supplier;
 
