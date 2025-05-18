@@ -1,14 +1,15 @@
 package svenhjol.charmony.echolocation.common.features.ore_sensing;
 
 import net.minecraft.util.Mth;
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Allows the player to see the outline of ores in the world when the Ore Sensing effect is applied.""")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class OreSensing extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;

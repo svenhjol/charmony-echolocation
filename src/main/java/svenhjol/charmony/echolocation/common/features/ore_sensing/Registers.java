@@ -15,7 +15,7 @@ import svenhjol.charmony.api.events.PlayerTickCallback;
 
 import java.util.function.Supplier;
 
-public final class Registers extends Setup<OreSensing> {
+public class Registers extends Setup<OreSensing> {
     public final Supplier<Holder<MobEffect>> oreSensingEffect;
     public final Supplier<EntityType<GlowingBlockEntity>> glowingBlockEntity;
 

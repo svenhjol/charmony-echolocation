@@ -13,12 +13,11 @@ import svenhjol.charmony.api.events.PlayerTickCallback;
 
 import java.util.function.Supplier;
 
-public final class Registers extends Setup<MobSensing> {
+public class Registers extends Setup<MobSensing> {
     public final Supplier<Holder<MobEffect>> mobSensingEffect;
 
     public Registers(MobSensing feature) {
         super(feature);
-        var registry = CommonRegistry.forFeature(feature);
 
         mobSensingEffect = new Registerable<>(feature,
             () -> Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT,

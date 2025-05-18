@@ -1,7 +1,7 @@
 package svenhjol.charmony.echolocation.client;
 
 import net.fabricmc.api.ClientModInitializer;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 import svenhjol.charmony.echolocation.EcholocationMod;
 import svenhjol.charmony.echolocation.client.features.ore_sensing.OreSensing;
 

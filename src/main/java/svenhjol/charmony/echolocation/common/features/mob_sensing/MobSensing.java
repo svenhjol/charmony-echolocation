@@ -1,13 +1,14 @@
 package svenhjol.charmony.echolocation.common.features.mob_sensing;
 
-import svenhjol.charmony.core.annotations.Configurable;
-import svenhjol.charmony.core.annotations.FeatureDefinition;
+import svenhjol.charmony.api.core.Configurable;
+import svenhjol.charmony.api.core.FeatureDefinition;
 import svenhjol.charmony.core.base.Mod;
 import svenhjol.charmony.core.base.SidedFeature;
-import svenhjol.charmony.core.enums.Side;
+import svenhjol.charmony.api.core.Side;
 
 @FeatureDefinition(side = Side.Common, description = """
     Allows the player to see the outline of mobs in the world when the Mob Sensing effect is applied.""")
+@SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal"})
 public final class MobSensing extends SidedFeature {
     public final Registers registers;
     public final Handlers handlers;
